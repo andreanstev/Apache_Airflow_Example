@@ -30,7 +30,8 @@ task2 = PythonOperator(
         task_id='task2',
         python_callable=sumnumber,
         provide_context=True,
-        op_kwargs={'x':a,'y':b},                                                                                                dag=dag1
+        op_kwargs={'x':a,'y':b},                                                                                                
+        dag=dag1
         )
 
 task1 >> task2
